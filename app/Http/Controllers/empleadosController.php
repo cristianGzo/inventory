@@ -35,10 +35,10 @@ class empleadosController extends Controller
     return response()->json(["data"=>$employees]);
     }
 
-    public function getEmployeesBySalary($salary) {
+   /* public function getEmployeesBySalary($salary) {
         $employees = Empleados::where('salario', $salary)->get();
         return response()->json($employees);
-    }
+    }*/
 
 
     public function salaries() {
