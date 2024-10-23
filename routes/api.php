@@ -25,7 +25,8 @@ Route::get('/employees', [empleadosController::class, 'employees'])->name("emplo
 
 
 //Rutas dispositivos
-Route::post('addBrand', [BrandController::class, 'create'])-> name("addBrand");
-Route::post('addModelo', [Modelo::class, 'create'])->name("addModelo");
-Route::post('addDevice', [device::class, 'create'])->name("addDevice");
+Route::post('/brand', [BrandController::class, 'create'])-> name("addBrand");
+Route::patch('/brand/{id}', [BrandController::class, 'update'])-> name("updateBrand");
+Route::post('/modelo', [Modelo::class, 'create'])->name("addModelo");
+Route::post('/addDevice', [device::class, 'create'])->name("addDevice");
 
